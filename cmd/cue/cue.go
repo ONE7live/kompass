@@ -1,9 +1,10 @@
 package main
 
 import (
-	"cuelang.org/go/cue"
 	"fmt"
 	"os"
+
+	"cuelang.org/go/cue"
 
 	app "github.com/ONE7live/kompass/pkg/cue"
 )
@@ -21,7 +22,7 @@ type Parameter struct {
 }
 
 func main() {
-	content, err := os.ReadFile("D:\\code\\go\\src\\kosmos\\self\\kompass\\cmd\\cue\\pod.cue")
+	content, err := os.ReadFile("D:\\code\\go\\src\\kosmos\\self\\kompass\\example\\pod.cue")
 	if err != nil {
 		fmt.Errorf("the cue script is invalid:%w", err)
 	}
