@@ -39,3 +39,11 @@ type LeafPodConvertPolicyStatus struct {
 	// +optional
 	CUEScript string `json:"cue,omitempty"`
 }
+
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
+
+type LeafPodConvertPolicyList struct {
+	metav1.TypeMeta `json:",inline"`
+	metav1.ListMeta `json:"metadata"`
+	Items           []LeafPodConvertPolicy `json:"items"`
+}
